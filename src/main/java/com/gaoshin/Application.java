@@ -4,14 +4,14 @@ import java.security.Principal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.security.oauth2.resource.EnableOAuth2Resource;
+import org.springframework.boot.autoconfigure.security.oauth2.client.EnableOAuth2Sso;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@EnableOAuth2Resource
+@EnableOAuth2Sso
 @RestController
 @RequestMapping(produces=MediaType.APPLICATION_JSON_VALUE)
 public class Application {
