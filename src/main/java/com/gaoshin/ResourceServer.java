@@ -13,6 +13,7 @@ public class ResourceServer extends ResourceServerConfigurerAdapter {
 	public void configure(HttpSecurity http) throws Exception {
 		http.csrf().disable();
 		http.headers().cacheControl().disable();
+		http.antMatcher("/**");
 		http.authorizeRequests().antMatchers("/**").permitAll();
 	}
 
